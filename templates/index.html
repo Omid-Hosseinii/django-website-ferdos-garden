@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+    <title>
+        
+        {% block title %}
+            omid site
+        {% endblock %}
+            
+    </title>
+    <style>
+        body{
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+      </style>
+</head>
+<body>
+
+      <!-- over navbar section contain : login/logout and logo -->
+      <div>
+        <div class="row g-0">
+          <div class="col-6"> 
+              <div class="me-3">
+                <img src="{{media_url}}/photos/logo/logo-1.png"alt="this is a logo">
+              </div>
+          </div>
+          
+          <div class="col-6">
+            <div class="d-flex pt-4 mt-2 m-4 justify-content-end">
+              <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary ">ورود</button>
+                <button type="button" class="btn btn-outline-primary me-1">ثبت نام</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    <!-- navbar section   -->
+    {% include 'partials/navbar.html' %}
+
+
+    {% block mainTemplate %}
+        <main>
+            <section class="mb-4 mt-3">
+
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <!-- -------------------------------------------------------------- -->
+                    <!-- -------------------------------------------------------------- -->
+                    <!-- -------------------------------------------------------------- -->
+                    <!-- -------------------------------------------------------------- -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="{{media_url}}photos/garden/slider-test1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>اولین اسلاید</h5>
+                          <p>این یک متن آزمایشی است.</p>
+                        </div>
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{media_url}}photos/garden/slider-test2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>دومین اسلاید</h5>
+                          <p>این یک متن آزمایشی است.</p>
+                        </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="{{media_url}}photos/garden/slider-test3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>سومین اسلاید</h5>
+                          <p>این یک متن آزمایشی است.</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">قبلی</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">بعدی</span>
+                    </button>
+                  </div>
+
+            </section>
+
+
+
+            <!-- cards section quick access -->
+            <section class="container mb-4">
+              <div class="row">
+
+                  <!-- <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <div class="col-sm-3">
+                    <div class="card bg-dark text-white">
+                      <img src="{{media_url}}photos/garden/color-test.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">ثبت خاطرات بازدید</h5>
+                        <p class="card-text">یک خلاصه ازثبت خاطرات بازدید اینجا قرار میگیرد.</p>
+                        <p class="card-text">آخرین به روز رسانی 3 دقیقه قبل</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <div class="card bg-dark text-white">
+                      <img src="{{media_url}}photos/garden/color-test.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">بخش های مورد بازدید</h5>
+                        <p class="card-text">یک خلاصه از بخش های مورد بادید اینجا قرار میگیرد.</p>
+                        <p class="card-text">آخرین به روز رسانی 3 دقیقه قبل</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <div class="card bg-dark text-white">
+                      <img src="{{media_url}}photos/garden/color-test.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">گزارش کارگاه های آموزشی</h5>
+                        <p class="card-text">یک خلاصه از گزارش کارگاه های آموزشی اینجا قرار میگیرد.</p>
+                        <p class="card-text">آخرین به روز رسانی 3 دقیقه قبل</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-sm-3">
+                    <div class="card bg-dark text-white">
+                      <img src="{{media_url}}photos/garden/color-test.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">گالری تصاویر و ویدیو</h5>
+                        <p class="card-text">یک خلاصه ازگالری تصاویر و ویدیو اینجا قرار میگیرد</p>
+                        <p class="card-text">آخرین به روز رسانی 3 دقیقه قبل</p>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </section>
+        </main>
+
+
+    {% endblock %}
+      
+  <!-- footer section -->
+  {% include 'partials/footer.html' %}
+</body>
+</html>
