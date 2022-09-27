@@ -6,10 +6,8 @@ import os
 
 # Create your views here.
 
-
+def media_admin(request):
+    return {'media_url':settings.MEDIA_URL}
 
 def index(request):
-    context={
-        'media_url':settings.MEDIA_URL
-    }
-    return render(request,'index.html',context)
+    return render(request,'MainApp/mainpage.html')

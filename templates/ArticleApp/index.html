@@ -1,0 +1,140 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+  معرفی باغ فردوس
+{% endblock %}
+  
+
+
+
+{% block mainTemplate %}
+
+
+<!-- post section -->
+
+<section class="container mb-4 mt-5">
+    <div class="container"> 
+      {% for article in articles %}
+        {% if article.is_active == True %}
+              <div>
+                <div class="row">
+                    <div class="col-4 d-flex justify-content-center align-items-center">
+                        <img src="{{media_url}}{{article.image}}" alt="this is photo" class="img-cardBlog">
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex justify-content-start bg-opacity-25 bg-secondary cardBlog">
+                            <div class="card-body">
+                              <h3 class="card-title">{{article.title}}</h3>
+                              <br/>
+                              <div class="mb-1">
+                                <span class="badge rounded-pill text-bg-info">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    تعداد بازدید:
+                                    <span>{{article.view_number}}</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                                </span>
+                                <span class="badge rounded-pill text-bg-info">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    تاریخ انتشار:
+                                    <span>{{article.register_date}}</span>
+                                </span>
+                              </div>
+                              <div class="mb-1">
+                                <span class="badge rounded-pill text-bg-info">
+                                  <i class="fa-regular fa-g"></i>
+                                    گروه:
+                                    <span>{{article.group}}</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                                </span>
+                              </div>
+                            
+                          <div class="mb-1">
+                            <span class="badge rounded-pill text-bg-info">
+                              <i class="fa fa-users" aria-hidden="true"></i>
+                              نویسندگان:
+                                {% for i in article_author %}                                 
+                                    {% if i.article_id == article.id %}                                     
+                                        {% for author in authors %}                                         
+                                            {% if author.id == i.author_id %}                                      
+                                                      <span>{{author.name}} {{author.family}} | &nbsp;&nbsp; </span>                                        
+                                            {% endif %}
+                                        {% endfor %}               
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                          </div>
+                              <p class="card-text lead text-end">{{article.short_text}}</p>
+                              <a href="#" class="btn btn-primary">ادامه ی مطلب</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+                  
+        <hr class="hr_style">  
+
+      {% endfor %}
+        
+
+<!-- ________________________________________________________________________________________________ -->
+
+
+
+    <!--Pagination-->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+
+      <!--Previous-->
+      {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+              {% endif %}
+      <!-- Previous-->
+
+      <!--Hellip-->
+      {% if page_obj.number|add:'-4' > 1 %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'-5' }}">&hellip;</a></li>
+      {% endif %}
+
+  <!--Pager-->
+  {% for i in page_obj.paginator.page_range %}
+      {% if page_obj.number == i %}
+          <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                  {{ i }}
+                  <span class="sr-only">(current)</span>
+              </span>
+          </li>
+      {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %}
+          <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+  {% endfor %}
+  <!--end Pager__>
+
+  <!Hellip-->
+  {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'5' }}">&hellip;</a></li>
+  {% endif %}
+  <!end Hellip -->
+
+  <!--Next-->
+  {% if page_obj.has_next %}
+      <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.next_page_number }}">بعدی</a>
+      </li>
+  {% else %}
+      <li class="page-item-disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="True">بعدی</a></li>
+  {% endif %}
+  <!--end Next-->
+  </ul>
+  </nav>
+
+  <!-- end of pagination -->
+<!-- _______________________________________________________________________________________________         -->
+
+
+    </div>
+</section>
+
+{% endblock %}

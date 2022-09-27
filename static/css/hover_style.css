@@ -1,0 +1,33 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.h0mouse:hover .hmouse{
+  display: block;
+}
+.hmouse{
+  margin-top: 0;
+}
+
+.container_search{
+  margin-top:200px;
+}
+
+.btnbtn_search:hover{
+  color:#fff;
+}
+
+.input-text:focus{
+     
+  box-shadow: 0px 0px 0px;
+  border-color:#f8c146;
+  outline: 0px;
+}
+
+.form-control {
+  border: 1px solid #f8c146;
+}
+
+

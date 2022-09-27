@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6EB7D6;">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#d8bc91">
+  <div class="container-fluid ">
 
-    <a class="navbar-brand text-danger active" href="#">باغ فردوس</a>
+    <a class="navbar-brand" href="{% url 'mainpage' %}">
+      <img src="{{media_url}}/photos/logo/logo-2.png"alt="this is a logo">
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,12 +12,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-0 mb-2 mb-lg-0">
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown h0mouse">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             منو
           </a>
-          <ul dir="rtl" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">تاریخچه</a></li>
+          <ul class="dropdown-menu hmouse dropdown-menu-dark dropdown-menu-left" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'introductionmain' %}" target="_blank">معرفی باغ</a></li>
+
             <li><a class="dropdown-item" href="#">بخش های مورد بازدید</a></li>
             <li><a class="dropdown-item" href="#">نقشه ی مسیر بازدید</a></li>
             <li><a class="dropdown-item" href="#">برنامه ی بازدید</a></li>
@@ -23,7 +26,7 @@
             <li><a class="dropdown-item" href="#">گالری تصاویر</a></li>
             <li><a class="dropdown-item" href="#">ثبت خاطرات بازدید</a></li>
             <li><a class="dropdown-item" href="#">اخبار</a></li>
-            <li><a class="dropdown-item" href="#">مقالات</a></li>
+            <li><a class="dropdown-item" href="{% url 'articlemain' %}" target="_blank">مقالات</a></li>
           </ul>
         </li>
 
@@ -31,17 +34,31 @@
           <a class="nav-link" aria-current="page" href="#">اخبار</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">مقالات</a>
+          <a class="nav-link" href="{% url 'articlemain' %}">مقالات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">تماس با ما</a>
+          <a class="nav-link" href="{% url 'introduction_contact_user' %}">تماس با ما</a>
         </li>
       </ul>
 
+
+      <!-- style="position:relative; right:700px;" -->
+
+      <div class="dropdown h0mouse register_class" style="position:relative; margin-right:50%;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ثبت نام|ورود
+        </button>
+        <div class="dropdown-menu hmouse" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">ورود</a>
+          <a class="dropdown-item" href="#">ثبت نام</a>
+        </div>
+      </div>
       
-      <form class="d-flex me-auto">
-          <input class="form-control me-2" type="search" placeholder="کلمه مورد نظر..." aria-label="Search">
-          <button class="btn btn-primary" type="submit"><span class="text-nowrap fw-normal">جست و جو</span></button>
+      <form class="d-flex me-auto search_form">
+
+          <input type="text" placeholder="جست جو..." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+
       </form>
       
 
@@ -120,4 +137,4 @@
 
         </div> -->
 
-  <!-- {% url 'mainpage' %} -->
+  <!-- {% url 'introductionmain' %} -->

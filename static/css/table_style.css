@@ -1,0 +1,44 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #fff;
+}
+
+.card_table {
+  border-radius: .5rem;
+}
+
+.table-scroll {
+  border-radius: .5rem;
+}
+
+.table-scroll table thead th {
+  font-size: 1.25rem;
+}
+thead {
+  top: 0;
+  position: sticky;
+}
+
+
+.terms_condition_style{
+  
+  border: 2px solid rgb(82, 117, 128); 
+  border-radius: 30px 30px 30px 30px;  
+}
+
+.img-placepart{
+  width: 600px;
+  height: 400px;
+}

@@ -1,0 +1,138 @@
+{% extends 'index.html' %}
+
+{% block title %}
+  صفحه ی اصلی
+{% endblock %}
+
+    
+
+{% block mainTemplate %}
+
+    <main>
+        <section class="container-fluid mb-4 mt-3">
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <!-- -------------------------------------------------------------- -->
+                <!-- -------------------------------------------------------------- -->
+                <!-- -------------------------------------------------------------- -->
+                <!-- -------------------------------------------------------------- -->
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{{media_url}}photos/garden/g1-slider.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>اولین اسلاید</h5>
+                    <p>این یک متن آزمایشی است.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{{media_url}}photos/garden/g2-slider.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>دومین اسلاید</h5>
+                    <p>این یک متن آزمایشی است.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{{media_url}}photos/garden/g3-slider.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>سومین اسلاید</h5>
+                    <p>این یک متن آزمایشی است.</p>
+                    </div>
+                </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">قبلی</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">بعدی</span>
+                </button>
+            </div>
+
+        </section>
+
+
+
+
+
+
+<!-- cards section quick access -->
+        <section class="container mb-4">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+                    <div class="col">
+                        <div class="card card_single">
+                            <img src="{{media_url}}photos/garden/b-1.jpg" class="card-img cardImg_main" alt="There was a pic this place">
+                            <div class="text-block textblock_card_main">
+                                <h4>ثبت خاطرات بازدید</h4>
+                              </div>
+                            <div class="card-body body_card cardBody_style">
+                                <h1 class="card-title cardTitle_main text-nowrap">ثبت خاطرات بازدید</h1>        
+                                <p class="card-info cardInfo_main">یک خلاصه ازثبت خاطرات بازدید اینجا قرار میگیرد.</p>
+                                <a href="#" class="card-btn cardBtn_main text-decoration-none">کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card card_single">
+                            <img src="{{media_url}}photos/garden/b-2.jpeg" class="card-img cardImg_main" alt="There was a pic this place">
+                            <div class="text-block textblock_card_main">
+                                <h4>بخش های مورد بازدید</h4>
+                              </div>
+                            <div class="card-body body_card cardBody_style">
+                                <h1 class="card-title cardTitle_main">بخش های مورد بازدید</h1>        
+                                <p class="card-info cardInfo_main">یک خلاصه از بخش های مورد بازدید اینجا قرار میگیرد.</p>
+                                <a href="#" class="card-btn cardBtn_main text-decoration-none">کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card card_single">
+                            <img src="{{media_url}}photos/garden/b-3.jpg" class="card-img cardImg_main" alt="There was a pic this place">
+                            <div class="text-block textblock_card_main">
+                                <h4 >کارگاه های آموزشی</h4>
+                              </div>
+                            <div class="card-body body_card cardBody_style">
+                                <h1 class="card-title cardTitle_main">گزارش کارگاه های آموزشی</h1>        
+                                <p class="card-info cardInfo_main">یک خلاصه از گزارش کارگاه های آموزشی اینجا قرار میگیرد.</p>
+                                <a href="#" class="card-btn cardBtn_main text-decoration-none">کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card card_single">
+                            <img src="{{media_url}}photos/garden/b-4.jpg" class="card-img cardImg_main" alt="There was a pic this place">
+                            <div class="text-block textblock_card_main">
+                                <h4>گالری تصاویر و ویدیو</h4>
+                              </div>
+                            <div class="card-body body_card cardBody_style">
+                                <h1 class="card-title cardTitle_main">گالری تصاویر و ویدیو</h1>        
+                                <p class="card-info cardInfo_main">یک خلاصه از بخش گالری تصاویر اینجا قرار میگیرد.</p>
+                                <a href="#" class="card-btn cardBtn_main text-decoration-none">کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

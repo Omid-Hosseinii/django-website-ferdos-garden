@@ -1,0 +1,116 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+برنامه و قوانین باغ فردوس
+{% endblock %}
+
+
+
+
+{% block mainTemplate %}
+
+        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">برنامه ی بازدید</h3>
+
+        
+
+        <section class="intro h-50 mt-5 mb-4">
+            <div class="bg-image ">
+            <div class="mask d-flex align-items-center ">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                    <div class="card_table">
+                        <div class="card-body_table p-0">
+                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 200px">
+                            <table class="table table-striped mb-0">
+                            <thead style="background-color: #002d72;">
+                                <tr>
+                                <th scope="col">نام مکان</th>
+                                <th scope="col">روز بازدید</th>
+                                <th scope="col">زمان بازدید</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>                                
+                                {% for place in places %}
+                                    <tr>
+                                    <td>{{place.place_name}}</td>
+                                    <td>{{place.visit_date_day}}</td>
+                                    <td>{{place.visit_time}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <hr/>
+
+        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">نرخ بیلیط ها</h3>
+
+        <section class="intro h-50 mt-5 mb-4">
+            <div class="bg-image">
+            <div class="mask d-flex align-items-center">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                    <div class="card_table">
+                        <div class="card-body_table p-0">
+                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 300px">
+                            <table class="table table-striped mb-0">
+                            <thead style="background-color: #002d72;">
+                                <tr>
+                                <th scope="col">نام مکان</th>
+                                <th scope="col">گروه بازدید کننده</th>
+                                <th scope="col">بهای بیلیط</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>      
+                                {% for price in prices %}
+                                    <tr>
+                                    <td>{{price.place}}</td>
+                                    <td>{{price.visitor_type}}</td>
+                                    <td>{{price.price}} تومان</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>        
+
+        <hr>
+        
+        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">قوانین و مقرارات</h3>
+                
+        {% for place in places %}
+            <div class="container terms_condition_style mt-2 mb-3">
+                <div class="mt-2" >
+                    <h2>
+                          {{place.place_name}} :  
+                    </h2>
+                    <p class="lead mt-2 mb-2 me-4">
+                        {{place.Terms_Conditions}}
+                    </p>
+                </div>        
+            </div>            
+        {% endfor %}
+        
+        <hr/>
+
+{% endblock %}
