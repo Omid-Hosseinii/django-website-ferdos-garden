@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+  معرفی باغ فردوس
+{% endblock %}
+  
+
+
+
+{% block mainTemplate %}
+
+        <div class="container">
+
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-3 mt-5">{{article.title}}</h1>
+                    <!-- Post meta content-->                    
+                    <!-- {% for i in article_author %}                      
+                        {% for author in authors %}                          
+                            {% if author.id == i.author_id %}
+                                <span class="text-muted fst-italic mb-2">{{author.name}} {{author.family}}</span>
+                            {% endif %}
+                        {% endfor %}    
+                    {% endfor %} -->
+                    <span>
+                        نویسندگان :
+                        {% for i in article_author %}                                 
+                            {% if i.article_id == article.id %}                                     
+                                {% for author in authors %}                                         
+                                    {% if author.id == i.author_id %}                                      
+                                          <span class="text-muted fst-italic mb-2">{{author.name}} {{author.family}}  &nbsp;&nbsp; </span>                                        
+                                    {% endif %}
+                                 {% endfor %}               
+                            {% endif %}
+                        {% endfor %}                    
+                    </span><br>  
+                    <!-- <div class="text-muted fst-italic mb-2">{{author}}</div> -->
+                    <span>
+                        تاریخ انتشار :
+                        <div class="text-muted fst-italic mb-2">{{article.publish_date}}</div>
+                    </span>
+                    <!-- Post categories-->
+                    <span>
+                        گروه مقاله :
+                        <div class="badge bg-secondary">{{article.group}}</div>
+                    </span>
+                </header>
+                <!-- Preview image figure-->
+                <figure class="mb-4"><img class="img-fluid rounded mx-auto d-block" src="{{media_url}}{{article.image}}" alt="..." /></figure>
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">{{article.text}}</p>
+                    <a class="mb-4 mt-5" href="{% url 'Articledl' article.id %}" target="_blank">دانلود مقاله</a><br><br><br>                  
+                    {% for image in image_list %}
+                        <img src="{{media_url}}images/articles/article_{{article.id}}/{{image}}" alt="this is photo" class="img-cardBlog">
+                    {% endfor %}  
+                </section>
+            </article>
+
+        </div>
+
+{% endblock %}

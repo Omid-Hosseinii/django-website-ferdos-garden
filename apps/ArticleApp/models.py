@@ -12,7 +12,6 @@ class Author(models.Model):
     is_active=models.BooleanField(default=False,verbose_name='فعال/غیرفال')
     slug=models.SlugField(max_length=200)
     
-    
     def __str__(self):
         return self.name+' '+self.family
     
@@ -25,8 +24,7 @@ class Author(models.Model):
 
 class ArticleGroup(models.Model):
     group_title= models.CharField(max_length=100,verbose_name='عنوان گروه مقاله')
-    
-    
+
     def __str__(self):
         return self.group_title
     
@@ -35,12 +33,16 @@ class ArticleGroup(models.Model):
         verbose_name_plural='گروه مقاله ها'
         db_table ="t_article_group"
         
+        
+        
+        
+        
 
 def image_path(instance,filename):
     ext=filename.split('.')[-1]
     name=filename.split('.')[0]
     current_date=datetime.utcnow().strftime('%Y%m%d%H%M%S')
-    return f'images/article/{name}-{current_date}.{ext}'
+    return f'images/articles/{name}-{current_date}.{ext}'
        
  
 class Article(models.Model):
@@ -67,30 +69,22 @@ class Article(models.Model):
         verbose_name='مقاله'
         verbose_name_plural='مقالات'
         db_table ="t_article"
-     
+
+
+
+
+def image_path2(instance,filename):
+    return f'images/articles/article_{instance.article.id}/{filename}'     
  
 class ArticleGallery(models.Model):
-    images=models.ImageField(upload_to=image_path, verbose_name='تصویر')
+    images=models.ImageField(upload_to=image_path2, verbose_name='تصویر')
     article=models.ForeignKey(Article,on_delete=models.CASCADE,verbose_name='مقاله')
- 
- 
- 
- 
+
     def __str__(self):
         return str(self.images)
- 
- 
+  
     class Meta:
         verbose_name='تصویر'
         verbose_name_plural='تصاویر'
         db_table ="t_article_gallery"
- 
- 
- 
- 
- 
- 
-        
-        
-        
-        
+    

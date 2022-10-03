@@ -14,7 +14,8 @@
             {{place.place_name}} :  
       </h2>
 
-      <img src="{{media_url}}/{{place.place_image_name}}" alt="{{place.place_image_name}}" class="mt-2 mb-3 " style="width:900px; height:600px;">
+      <figure class="mb-4"><img class="img-fluid rounded mx-auto d-block mt-2 mb-3" src="{{media_url}}/{{place.place_image_name}}" alt="{{place.place_image_name}}" style="width:900px; height:600px;"/></figure>
+      <!-- <img class='mx-auto d-block' src="{{media_url}}/{{place.place_image_name}}" alt="{{place.place_image_name}}" class="mt-2 mb-3 " style="width:900px; height:600px;"> -->
 
       <p class="lead mt-2 mb-2 me-4">
           {{place.description}}

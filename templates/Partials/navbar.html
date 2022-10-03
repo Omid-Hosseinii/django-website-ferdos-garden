@@ -19,9 +19,9 @@
           <ul class="dropdown-menu hmouse dropdown-menu-dark dropdown-menu-left" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{% url 'introductionmain' %}" target="_blank">معرفی باغ</a></li>
 
-            <li><a class="dropdown-item" href="#">بخش های مورد بازدید</a></li>
-            <li><a class="dropdown-item" href="#">نقشه ی مسیر بازدید</a></li>
-            <li><a class="dropdown-item" href="#">برنامه ی بازدید</a></li>
+            <li><a class="dropdown-item" href="{% url 'introductionparts' %}">بخش های مورد بازدید</a></li>
+            <li><a class="dropdown-item" href="{% url 'introduction_pdfdownload' %}">نقشه ی مسیر بازدید</a></li>
+            <li><a class="dropdown-item" href="{% url 'introduction_schedulecondition' %}">برنامه ی بازدید</a></li>
             <li><a class="dropdown-item" href="#">کارگاه های آموزشی</a></li>
             <li><a class="dropdown-item" href="#">گالری تصاویر</a></li>
             <li><a class="dropdown-item" href="#">ثبت خاطرات بازدید</a></li>
@@ -48,7 +48,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ثبت نام|ورود
         </button>
-        <div class="dropdown-menu hmouse" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu hmouse" aria-labelledby="dropdownMenuButton" >
           <a class="dropdown-item" href="#">ورود</a>
           <a class="dropdown-item" href="#">ثبت نام</a>
         </div>
