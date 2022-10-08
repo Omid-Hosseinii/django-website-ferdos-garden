@@ -22,17 +22,15 @@
             <li><a class="dropdown-item" href="{% url 'introductionparts' %}">بخش های مورد بازدید</a></li>
             <li><a class="dropdown-item" href="{% url 'introduction_pdfdownload' %}">نقشه ی مسیر بازدید</a></li>
             <li><a class="dropdown-item" href="{% url 'introduction_schedulecondition' %}">برنامه ی بازدید</a></li>
-            <li><a class="dropdown-item" href="#">کارگاه های آموزشی</a></li>
+            <li><a class="dropdown-item" href="{% url 'workshopindex' %}">کارگاه های آموزشی</a></li>
             <li><a class="dropdown-item" href="#">گالری تصاویر</a></li>
             <li><a class="dropdown-item" href="#">ثبت خاطرات بازدید</a></li>
-            <li><a class="dropdown-item" href="#">اخبار</a></li>
+            
             <li><a class="dropdown-item" href="{% url 'articlemain' %}" target="_blank">مقالات</a></li>
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">اخبار</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'articlemain' %}">مقالات</a>
         </li>

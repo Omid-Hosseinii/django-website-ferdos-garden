@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block title %}
+  کارگاه های آموزشی | جزئیات
+{% endblock %}
+
+
+{% block mainTemplate %}
+ 
+        
+<!-- post section -->
+
+        <section class="container mb-5 mt-5">
+            <h3 class="mb-3 mt-4">متن گزارش</h3>
+            <p class="card-text lead text-end">{{workshop.report_text}}</p>
+
+            
+            {% if image_list %}
+                
+            <div class="mb-5 mt-4">
+                <h3>عکس های مربوط به کارگاه</h3>
+            </div>
+                {% for image in image_list %}
+
+                    <img src="{{media_url}}images/workshops/report/{{workshop.id}}/{{image}}" alt="{{workshop.title}}" class="img-cardBlog">
+                    
+                {% endfor %}
+                    
+                
+            {% endif %}
+                
+        </section>
+
+
+
+{% endblock %}
