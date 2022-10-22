@@ -9,6 +9,11 @@ urlpatterns = [
     path('Introduction/', include('apps.IntroductionApp.urls')),
     path('blog/', include('apps.ArticleApp.urls')),
     path('workshop/', include('apps.WorkshopApp.urls')),
+    path('accounts/', include('apps.accountsApp.urls')),
+    path('memoriesferdows/', include('apps.MemoriseFerdowsApp.urls')),
+    path('search/', include('apps.SearchApp.urls')),
+    
+    
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

@@ -13,14 +13,13 @@
     <link rel="stylesheet" href="{% static '/css/style_article.css' %}">
     <link rel="stylesheet" href="{% static '/css/hover_style.css' %}">
     <link rel="stylesheet" href="{% static '/css/table_style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/fonts_face.css' %}">
+    <link rel="stylesheet" href="{% static '/css/memory_card_style.css' %}">
     
     <link rel="stylesheet" href="{% static '/css/style_search.css' %}">
-    
+    <!-- for ajax -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 
-    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static '/js/myjs.js' %}"></script>
 
     <title>
         
@@ -30,7 +29,6 @@
         
     </title>
     <style>
-           
 
     </style>
 </head>
@@ -48,5 +46,11 @@
         {% endblock %}
     <!-- footer section -->
     {% include 'partials/footer.html' %}
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+    
+    
+    {% include 'partials/scripts.html' %}
 </body>
 </html>

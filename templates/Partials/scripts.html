@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<script>
+    function like(id){
+        $.ajax({
+            type:"GET",
+            url:"{% url 'likememory' %}",
+            data:{
+                memory_id:id,
+            },
+            success:function(res){
+                $('#icon_like'+id).removeClass('fa fa-heart-o');
+                $('#icon_like'+id).addClass('fa fa-heart');
+            }
+        });
+    }
+</script>

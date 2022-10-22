@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'apps.IntroductionApp.apps.IntroductionappConfig',
     'apps.ArticleApp.apps.ArticleappConfig',
     'apps.WorkshopApp.apps.WorkshopappConfig',
+    'apps.accountsApp.apps.AccountsappConfig',
+    'apps.MemoriseFerdowsApp.apps.MemoriseferdowsappConfig',
+    'crispy_forms',
+    'apps.SearchApp.apps.SearchappConfig',
+    
 ]
 
 MIDDLEWARE = [

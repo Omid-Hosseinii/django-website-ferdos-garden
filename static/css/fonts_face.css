@@ -1,0 +1,75 @@
+/* Defined font face */
+
+@font-face {
+    font-family: 'IRANYekanBold';
+    /* it should be url but we use local server so we used local for address ( when website deployed on server we should use url ) */
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanBold.ttf' %}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANYekanMedium';
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanMedium.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANYekanExtraBold';
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanExtraBold.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANYekanRegular';
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanRegular.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANYekanThin';
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanThin.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANYekanLight';
+    src: local("{% static '/fonts/IRANYEKAN/IRANYekanLight.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nazanin';
+    src: local("{% static '/fonts/Other/nazanin.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ____________________________________________________________________________________________ */
+
+/* defined font for ech tag */
+
+#workshop_font{
+    font-family: 'nazanin';
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.textblock_card_main h4{
+    font-family: 'nazanin';
+    
+}
+
+.cardBody_style h1{
+    font-family: 'IRANYekanExtraBold';
+}
+.cardBody_style p{
+    font-family: 'nazanin';
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#article-shorttxt{
+    font-family: 'IRANYekanBold'
+}
+
+

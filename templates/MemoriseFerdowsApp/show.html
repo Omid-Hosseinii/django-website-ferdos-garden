@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+  معرفی باغ فردوس
+{% endblock %}
+  
+
+
+
+{% block mainTemplate %}
+
+
+    <div class="container mb-5 mt-5 ">
+
+        
+        {% for memory in memories %}
+
+
+                <div class="card text-center mt-3 card-memories bg-opacity-25" style="background-color:#ddc595";>
+                    <div class="card-header">
+                    
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold mt-2 mb-5">{{memory.memory_title}}</h5>
+                    <p class="card-text lead">{{memory.memory_text}}</p>
+                    <hr class="hr-memory">
+                    
+                    
+                    {% for image in memory.pics.all %}
+
+                        <img src="{{media_url}}{{image.memory_image_name}}" alt="{{image.memory_image_name}}" class="img-memories m-3" >
+                        
+                    {% endfor %}
+                        
+
+                    
+                    </div>
+                    <div class="card-footer text-muted">
+
+                        {% if memory.id in list_memory_liked_id %}
+                            <a id="liked" href="#"><i class="fa fa-heart"></i></a>
+                        {% else %}                           
+                            <a id="unliked" onclick="like({{memory.id}})">
+                                <i id="icon_like{{memory.id}}" class="fa fa-heart-o"></i>
+                            </a>
+                        {% endif %}
+                            
+                    </div>
+                </div>
+            
+        {% endfor %}
+            
+
+
+
+
+
+    </div>
+
+    
+
+
+{% endblock %}
