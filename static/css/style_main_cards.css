@@ -11,7 +11,7 @@
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    border: 5px solid #fff;
+    border: 5px solid #bd9a54;
     position: relative;
     box-shadow: 1px 2px 20px rgb(159, 159, 159);
 }
@@ -28,8 +28,9 @@
     position: absolute;
     bottom: 30px;
     left: 15px;
-    border : 2px solid #D4D9A9;
-    background-color: rgb(255, 233, 122);
+    border : 3px solid #bd9a54;
+    background-color: #D4D9A9;
+    box-shadow: 1px 2px 20px rgb(159, 159, 159);
     color: black;
     padding-left: 20px;
     padding-right: 20px;
@@ -60,7 +61,7 @@
 }
 
 .cardBody_style a:hover {
-    color:rgb(255, 166, 0);
+    color:rgb(197, 128, 1);
 }
 
 .card_single:hover .cardBody_style{
@@ -82,8 +83,8 @@
 }
 
 .cardBtn_main{
-    color: #1f3d47;
-    background: #36768c;
+    color: #47311f;
+    background: #D4D9A9;
     padding: 10px 20px;
     width: 120px;
     border-radius: 5px;
@@ -91,6 +92,5 @@
     border: none;
     outline: none;
     font-weight: 500;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }

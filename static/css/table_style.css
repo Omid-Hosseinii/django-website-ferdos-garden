@@ -2,6 +2,7 @@ html,
 body,
 .intro {
   height: 100%;
+  
 }
 
 table td,
@@ -29,13 +30,16 @@ thead th {
 thead {
   top: 0;
   position: sticky;
+  background-color: #ebb25dd6;
 }
 
 
 .terms_condition_style{
   
-  border: 2px solid rgb(82, 117, 128); 
-  border-radius: 30px 30px 30px 30px;  
+  border: 1mm solid #ebb25dd6;
+  border-radius: 12px;
+  box-shadow: 4px 5px 5px rgb(127, 126, 126);
+  background-color:#a0c5c9c6;
 }
 
 .img-placepart{

@@ -10,7 +10,7 @@
 
 {% block mainTemplate %}
 
-        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">برنامه ی بازدید</h3>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">برنامه ی بازدید</h3>
 
         
 
@@ -24,7 +24,7 @@
                         <div class="card-body_table p-0">
                         <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 200px">
                             <table class="table table-striped mb-0">
-                            <thead style="background-color: #002d72;">
+                            <thead class="thead-schedule-font">
                                 <tr>
                                 <th scope="col">نام مکان</th>
                                 <th scope="col">روز بازدید</th>
@@ -32,7 +32,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>                                
+                            <tbody class="tbody-schedule-font">                                
                                 {% for place in places %}
                                     <tr>
                                     <td>{{place.place_name}}</td>
@@ -54,7 +54,7 @@
 
         <hr/>
 
-        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">نرخ بیلیط ها</h3>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">نرخ بیلیط ها</h3>
 
         <section class="intro h-50 mt-5 mb-4">
             <div class="bg-image">
@@ -66,7 +66,7 @@
                         <div class="card-body_table p-0">
                         <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 300px">
                             <table class="table table-striped mb-0">
-                            <thead style="background-color: #002d72;">
+                            <thead class="thead-schedule-font">
                                 <tr>
                                 <th scope="col">نام مکان</th>
                                 <th scope="col">گروه بازدید کننده</th>
@@ -74,7 +74,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>      
+                            <tbody class="tbody-schedule-font">      
                                 {% for price in prices %}
                                     <tr>
                                     <td>{{price.place}}</td>
@@ -96,7 +96,7 @@
 
         <hr>
         
-        <h3 class="d-flex justify-content-center text-info mt-4 mb-4">قوانین و مقرارات</h3>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">قوانین و مقرارات</h3>
                 
         {% for place in places %}
             <div class="container terms_condition_style mt-2 mb-3">

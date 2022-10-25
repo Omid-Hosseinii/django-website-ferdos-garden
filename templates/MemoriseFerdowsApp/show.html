@@ -17,14 +17,11 @@
         {% for memory in memories %}
 
 
-                <div class="card text-center mt-3 card-memories bg-opacity-25" style="background-color:#ddc595";>
-                    <div class="card-header">
-                    
-                    </div>
+                <div class="card text-center mt-4 card-memories bg-opacity-25">
                     <div class="card-body">
-                    <h5 class="card-title fw-bold mt-2 mb-5">{{memory.memory_title}}</h5>
-                    <p class="card-text lead">{{memory.memory_text}}</p>
-                    <hr class="hr-memory">
+                        <h5 class="card-title fw-bold mt-2 mb-5">{{memory.memory_title}}</h5>
+                        <p class="card-text lead">{{memory.memory_text}}</p>
+                        <hr class="hr-memory">
                     
                     
                     {% for image in memory.pics.all %}

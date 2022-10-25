@@ -4,7 +4,7 @@
     font-family: 'IRANYekanBold';
     /* it should be url but we use local server so we used local for address ( when website deployed on server we should use url ) */
     src: local("{% static '/fonts/IRANYEKAN/IRANYekanBold.ttf' %}") format('truetype');
-    font-weight: normal;
+    font-weight: bold !important;
     font-style: normal;
 }
 @font-face {
@@ -16,7 +16,7 @@
 @font-face {
     font-family: 'IRANYekanExtraBold';
     src: local("{% static '/fonts/IRANYEKAN/IRANYekanExtraBold.ttf' %}")format('truetype');
-    font-weight: normal;
+    font-weight: Bolder;
     font-style: normal;
 }
 @font-face {
@@ -46,30 +46,237 @@
 
 /* ____________________________________________________________________________________________ */
 
-/* defined font for ech tag */
 
-#workshop_font{
-    font-family: 'nazanin';
-}
+
+/* -------------------------------------------------------------------------------- */
+/* defined font for ech tag */
+/* -------------------------------------------------------------------------------- */
+
+
 
 /* -------------------------------------------------------------------------------- */
 
 .textblock_card_main h4{
-    font-family: 'nazanin';
-    
+    font-family: 'IRANYekanLight';
 }
 
 .cardBody_style h1{
     font-family: 'IRANYekanExtraBold';
 }
 .cardBody_style p{
-    font-family: 'nazanin';
+    font-family: 'IRANYekanRegular';
+}
+
+.cardBtn_main{
+    font-family: 'IRANYekanBold';
+    font-size:20px;
 }
 
 /* -------------------------------------------------------------------------------- */
+/* article */
+/* -------------------------------------------------------------------------------- */
+/* footer */
+.footer-element > p{   
+    font-family: 'IRANYekanRegular';
+    font-size:21px;
+}
+.footer-element > h2, .footer-element > h5 ,.footer-link > h2{   
+    font-family: 'IRANYekanBold';
+    font-size:35px;
+}
+.footer-link > a {   
+    font-family: 'IRANYekanBold';
+    font-size:23px;
+}
+/* -------------------------------------------------------------------------------- */
 
-#article-shorttxt{
-    font-family: 'IRANYekanBold'
+/* navbar */
+.dropdown-menu > li > a,.login-font > a{
+    font-family: 'IRANYekanExtraBold';
+    font-size:18px
+}
+
+.search_form > input[placeholder] {
+    font-family: 'IRANYekanRegular';
+    font-size:50px;
+}
+
+.navbar-font1 > .nav-item > a , .register_class > button{
+    font-family: 'IRANYekanBold';
+    font-size:19px;
+}
+/* -------------------------------------------------------------------------------- */
+/* introduction section */
+
+/* main */
+.introduction-1 > p {
+    font-family: 'IRANYekanRegular';
+    font-size:22px;
+}
+
+.jumbo-border > .jumbotron > h1 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:45px
+}
+
+.jumbo-border > .jumbotron > p {
+    font-family: 'IRANYekanThin';
+    font-size:21px
+}
+
+/* parts place  */
+
+.place-parts > div > h2 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:40px
+    
+}
+
+.place-parts > div > p {
+    font-family: 'IRANYekanRegular';
+    font-size:22px;
+}
+
+.place-parts > div > button > a{
+    font-family: 'IRANYekanRegular';
+    font-size:20px;
+
+}
+
+/* part place detail */
+
+.place-part-detail > div > h2 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:45px
+}
+.place-part-detail > div > span > h5 {
+    font-family: 'IRANYekanThin';
+    font-size:19px
+}
+.place-part-detail > div > p {
+    font-family: 'IRANYekanRegular';
+    font-size:23px
+}
+
+/* schedule part place */
+.schedule-title-font {
+    font-family: 'IRANYekanExtraBold';
+    font-size:40px
+
+}
+
+.thead-schedule-font {
+    font-family: 'IRANYekanBold';
+    font-size:100px
+}
+.tbody-schedule-font {
+    font-family: 'IRANYekanRegular';
+    font-size:16px
+}
+
+.terms_condition_style > div > h2 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:40px
+    
+} 
+.terms_condition_style > div > p {
+    font-family: 'IRANYekanRegular';
+    font-size:20px
+
+} 
+
+
+/* -------------------------------------------------------------------------------- */
+
+/* memories and forms fonts */
+
+.card-memories > div > h5 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:35px
+
+}
+.card-memories > div > p , .contact-form > div > p {
+    font-family: 'IRANYekanRegular';
+    font-size:18px
+}
+
+.addmemory > div > h3 , .contact-form > div > h3 , .login-form > div > h3 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:35px
+}
+.form-label-font , .img-form-font > div > label {
+    font-family: 'IRANYekanRegular';
+    font-size:18px
+}
+
+.btn-form > button {
+    font-family: 'IRANYekanRegular';
+    font-size:25px
+
+}
+
+.contact-form > .justify-content-center > div > div > div > input[placeholder],
+.login-form > .justify-content-center > div > div > div > input[placeholder] {
+    font-family: 'IRANYekanRegular';
+    font-size:18px
+}
+
+.contact-form > .justify-content-center > div > div > button,
+.login-form > .justify-content-center > div > div > .d-grid > button {
+    font-family: 'IRANYekanRegular';
+    font-size:18px
+}
+/* -------------------------------------------------------------------------------- */
+
+/* workshop  and article */
+
+.cardBlog > .card-body > h3 , .cardBlog > h3 , .cardBlog > div > h4  {
+    font-family: 'IRANYekanExtraBold';
+    font-size:35px 
+}
+
+.cardBlog > .card-body > p , .cardBlog > .card-body > .btn-primary {
+    font-family: 'IRANYekanRegular';
+    font-size:18px
+
+}
+
+.cardBlog > .card-body > .mb-1 > span {
+    font-family: 'IRANYekanThin';
+    font-size:15px
 }
 
 
+/* report */
+.report > span > h2 , .report > h3 , .report > div > h3{
+    font-family: 'IRANYekanExtraBold';
+    font-size:35px 
+}
+.report > p {
+    font-family: 'IRANYekanRegular';
+    font-size:20px 
+}
+
+/* article detail */
+
+.article-detail > h1 {
+    font-family: 'IRANYekanExtraBold';
+    font-size:42px 
+}
+.article-detail > span  {
+    font-family: 'IRANYekanThin';
+    font-size:18px 
+}
+.article-detail > span > span , .article-detail > span > div {
+    font-family: 'IRANYekanThin';
+    font-size:16px 
+}
+
+.article-detail-description{
+    font-family: 'IRANYekanRegular';
+    font-size:55px 
+}
+.article-detail-pdf{
+    font-family: 'IRANYekanRegular';
+    font-size:25px 
+}

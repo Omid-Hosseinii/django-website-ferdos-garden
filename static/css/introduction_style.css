@@ -1,0 +1,93 @@
+/* introduction main style  */
+
+/* all image */
+.introduction-1 > img ,.jumbo-border > .jumbotron , .place-parts > div > img , .place-part-detail > div > figure > img {
+    border: 0.5mm outset #ebb25dd6;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgb(127, 126, 126);
+}
+
+.introduction-1 > p {
+  text-align: justify;
+}
+
+.button1 > span > a:link { text-decoration: none; }
+
+.button1 > span > a:hover {
+    color:rgb(52, 250, 247);
+}
+.button1 > span > a {
+    color:rgb(255, 255, 255);
+}
+
+.button1 {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #ebb25dd6;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 4px 3px 3px rgb(127, 126, 126);
+    font-size: 20px;
+    padding: 12px;
+    width: 150px;
+    transition: all 0.8s;
+    cursor: pointer;
+    
+  }
+  
+  .button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button1:hover span {
+    padding-right: 25px;
+  }
+  
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+/* ------------------------------------------------------------------------------------- */
+/* places parts btn style  */
+.place-part-detail > div > p {
+  text-align: justify;
+}
+
+.btn-place-parts > a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-place-parts > a:hover {
+    color:rgb(7, 171, 168);
+}
+.btn-place-parts > a {
+    color:rgb(0, 0, 0);
+}
+.btn-place-parts {
+  background-color: #a0c5c9dc;
+  border-radius: 5px;
+  color: black;
+  border: 2px solid #ebb25dd6; 
+  transition-duration: 0.4s;
+  box-shadow: 4px 3px 3px rgb(127, 126, 126);
+  padding: 8px 8px;
+}
+.btn-place-parts:hover {
+  background-color: #D4D9A9; 
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

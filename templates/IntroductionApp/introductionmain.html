@@ -11,12 +11,12 @@
 {% block mainTemplate %}
 
         {% include 'partials/messages.html' %}
-        <section class="mt-3 ">
+        <section class="mt-5 mb-4 ">
           
-          <div class="container ">
-            <img class="border border-secondary img-fluid mx-auto d-block" src="{{media_url}}photos/garden/introductionmain.jpg" alt="">
+          <div class="container introduction-1">
+            <img class="img-fluid mx-auto d-block" src="{{media_url}}photos/garden/introductionmain.jpg" alt="">
             
-            <p class="mt-3">
+            <p class="mt-4">
               باغ فردوس را به چشم یک بنای تاریخی عادی نگاه نکنید، البته که می‌دانم این همه زیبایی عادی نیست اما منظورم چیز دیگری است. باغ فردوس نسبت به خیلی از بناهای تاریخی سن‌وسال زیادی ندارد اما سرگذشتش سر دراز دارد؛ آ‌ن‌قدر مثل سیب از درخت افتاده چرخیده و چرخیده تا اینکه بالاخره در وضعیتی که حالا می‌بینیمش آرام گرفته است.
 
 در دوره قاجار و در سال 1264 ه.ق محمدشاه قاجار دستور ساخت قصر بزرگی را در منطقه محمدیه صادر کرد. ساخت این قصر با دو عمارت شمالی و جنوبی در مساحتی نزدیک به 20هزار مترمربع توسط صدراعظم شاه، حاجی میرزا آقاسی آغاز شد اما به‌علت بیماری محمدشاه قاجار و مرگ وی، ساخت قصر نیمه‌تمام باقی ماند. در حال حاضر عمارت شمالی به‌طور کامل از بین رفته اما عمارت جنوبی باقی مانده است.
@@ -32,34 +32,44 @@
 
         <section class="mt-2">
 
-          <div class="container">
+          <div class="container jumbo-border">
 
-            <div class="jumbotron mb-4 border border-danger">
-              <h1 class="display-4">بخش های باغ</h1>
+            <div class="jumbotron mb-4 px-3">
+              <h1 class="mt-4">بخش های باغ</h1>
               <p class="lead">در این قسمت شما با بخش ها و مکان های باغ آشنا می شوید</p>
               <hr class="my-4">
-              <p class="lead">
-                <a class="btn btn-primary btn-lg m-3" href="{% url 'introductionparts' %}" role="button" target="_blank">کلیک کنید</a>
-              </p>
+              <div class="lead d-flex justify-content-end jumbo-btn">
+                <button class="button1">
+                  <span>
+                    <a href="{% url 'introductionparts' %}" role="button">کلیک کنید</a>
+                  </span>
+                </button>
+              </div>
             </div>
 
 
-          <div class="jumbotron mb-4 border border-danger">
-            <h1 class="display-4">مسیر بازدید</h1>
+          <div class="jumbotron mb-4 px-3">
+            <h1 class="mt-4">مسیر بازدید</h1>
             <p class="lead">در این قسمت شما می توانید مسیر بازدید از باغ را در غالب یک فایل پی دی اف دانلود کنید</p>
             <hr class="my-4">
-            <p class="lead">
-              <a class="btn btn-primary btn-lg m-3" href="{% url 'introduction_pdfdownload' %}" role="button">دانلود</a>
-            </p>
+            <div class="lead d-flex justify-content-end jumbo-btn">
+              <button class="button1">
+                <span>
+                  <a href="{% url 'introduction_pdfdownload' %}" role="button">دانلود</a>
+                </span>
+            </div>
           </div>
 
-          <div class="jumbotron mb-4 border border-danger">
-            <h1 class="display-4">برنامه و قوانین</h1>
+          <div class="jumbotron mb-4 px-3">
+            <h1 class="mt-4">برنامه و قوانین</h1>
             <p class="lead">برای اطلاع از برنامه بازدید و قوانین باغ فردوس تهران روی لینک زیر کلیک کنید</p>
             <hr class="my-4">
-            <p class="lead">
-              <a class="btn btn-primary btn-lg m-3" href="{% url 'introduction_schedulecondition' %}" role="button" target="_blank">کیلیک کنید</a>
-            </p>
+            <div class="lead d-flex justify-content-end jumbo-btn">
+              <button class="button1">
+                <span>
+                  <a href="{% url 'introduction_schedulecondition' %}" role="button">کیلیک کنید</a>
+                </span>
+            </div>
           </div>
 
 

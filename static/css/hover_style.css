@@ -30,4 +30,17 @@ body{
   border: 1px solid #f8c146;
 }
 
+.footer-link > a:link { text-decoration: none; }
 
+.footer-link > a {
+  box-shadow: inset 0 0 0 0 #01afae;
+  color: #01afae;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+.footer-link > a:hover  {
+  box-shadow: inset 195px 0 0 0 #01afae;
+  color: white;
+}

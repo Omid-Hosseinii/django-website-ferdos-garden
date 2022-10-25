@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D4D9A9">
-  <div class="container-fluid ">
-<!-- #d8bc91 -->
+  <div class="container-fluid">
+
     <a class="navbar-brand" href="{% url 'mainpage' %}">
-      <img src="{{media_url}}/photos/logo/logo-2.png"alt="this is a logo">
+      <img src="{{media_url}}/photos/logo/logo-2.png" alt="this is a logo">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,29 +10,27 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+      <ul class="navbar-nav me-0 mb-2 mb-lg-0 navbar-font1">
 
         <li class="nav-item dropdown h0mouse">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             منو
           </a>
-          <ul class="dropdown-menu hmouse dropdown-menu-dark dropdown-menu-left" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu hmouse dropdown-menu-dark dropdown-menu-left navbar-font" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{% url 'introductionmain' %}" target="_blank">معرفی باغ</a></li>
 
-            <li><a class="dropdown-item" href="{% url 'introductionparts' %}">بخش های مورد بازدید</a></li>
+            <li><a class="dropdown-item" href="{% url 'introductionparts' %}" target="_blank">بخش های مورد بازدید</a></li>
             <li><a class="dropdown-item" href="{% url 'introduction_pdfdownload' %}">نقشه ی مسیر بازدید</a></li>
-            <li><a class="dropdown-item" href="{% url 'introduction_schedulecondition' %}">برنامه ی بازدید</a></li>
-            <li><a class="dropdown-item" href="{% url 'workshopindex' %}">کارگاه های آموزشی</a></li>
-            <li><a class="dropdown-item" href="#">گالری تصاویر</a></li>
-            <li><a class="dropdown-item" href="#">ثبت خاطرات بازدید</a></li>
-            
+            <li><a class="dropdown-item" href="{% url 'introduction_schedulecondition' %}" target="_blank">برنامه ی بازدید</a></li>
+            <li><a class="dropdown-item" href="{% url 'workshopindex' %}" target="_blank">کارگاه های آموزشی</a></li>
+            <li><a class="dropdown-item" href="{% url 'addmemory' %}">ثبت خاطرات بازدید</a></li>
             <li><a class="dropdown-item" href="{% url 'articlemain' %}" target="_blank">مقالات</a></li>
           </ul>
         </li>
 
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'articlemain' %}">مقالات</a>
+          <a class="nav-link" href="{% url 'articlemain' %}" target="_blank">مقالات</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'introduction_contact_user' %}">تماس با ما</a>
@@ -56,17 +54,13 @@
           </li>          
         </ul>
 
-
-
-
-
       {% else %}
       
-      <div class="dropdown h0mouse register_class" style="position:relative; margin-right:50%;">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown h0mouse register_class" style="position:relative; margin-right:57%;">
+        <button class="btn dropdown-toggle bg-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ثبت نام|ورود
         </button>
-        <div class="dropdown-menu hmouse" aria-labelledby="dropdownMenuButton" >
+        <div class="dropdown-menu hmouse dropdown-menu-dark login-font" aria-labelledby="dropdownMenuButton" >
           <a class="dropdown-item" href="{% url 'LoginUser' %}">ورود</a>
           <a class="dropdown-item" href="{% url 'RegisterUser' %}">ثبت نام</a>
         </div>
@@ -81,81 +75,8 @@
           <button type="submit"><i class="fa fa-search"></i></button>
 
       </form>
-      
-
+    
 
     </div>
   </div>
 </nav>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <nav dir="rtl" class="navbar navbar-expand-lg" style='background-color: #e3f2fd;'>
-    <div class="container-fluid">
-      <a class="navbar-brand text-danger" href="#">خانه باغ فردوس</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              منو
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="https://getbootstrap.com/" target="_blank">bootstrap website</a></li>
-              <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">bootstrap documentation</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://docs.djangoproject.com/en/4.0/" target="_blank">django documentation</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" target="_blank">اخبار</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">مقالات</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="admin" target="_blank">تماس با ما</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">ورود|ثبت نام</a>
-          </li>
-          
-        </ul>
-
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="جست و جو" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">&#128269;</button>
-        </form>
-
-
-
-
-      </div>
-    </div>
-  </nav> -->
-<!-- 
-        <div class="position-relative" style="left:-700px;">
-
-        </div> -->
-
-  <!-- {% url 'introductionmain' %} -->
