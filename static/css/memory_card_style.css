@@ -25,7 +25,7 @@
 }
 
 .fa-heart {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .fa-heart-o {
@@ -56,5 +56,15 @@
 .btn-form > button:hover {
   background-color: #D4D9A9; 
   color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hr-style-memory{
+  display: flex;
+  width: 12%;
+  position: relative;
+  bottom: 40px !important;
+  border: 2px solid #01afae;
+  border-radius: 2px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

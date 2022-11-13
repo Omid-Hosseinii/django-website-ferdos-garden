@@ -21,6 +21,7 @@ class ShowmMemries(View):
             list_memory_liked=MemoryLike.objects.filter(user_liked_id=request.user.id).values("memory_id")
             list_memory_liked_id=[memory["memory_id"] for memory in list_memory_liked]
             return render(request,'MemoriseFerdowsApp/show.html',context={'memories':memories,'list_memory_liked_id':list_memory_liked_id})
+        
         return render(request,'MemoriseFerdowsApp/show.html',context={'memories':memories})
     
     

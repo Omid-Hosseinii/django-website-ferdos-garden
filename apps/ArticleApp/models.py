@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 
@@ -51,7 +52,7 @@ class Article(models.Model):
     title=models.CharField(max_length=200,verbose_name='مقاله عنوان')
     image=models.ImageField(upload_to=image_path, verbose_name='تصویر')
     short_text=models.TextField(verbose_name='متن خلاصه')
-    text=models.TextField(verbose_name='متن اصلی')
+    text=RichTextField(verbose_name='متن اصلی')
     key_words=models.CharField(max_length=200,verbose_name='کلمات کلیدی')
     register_date=models.DateField(auto_now_add=True,verbose_name='تاریخ درج مقاله')
     publish_date=models.DateField(default=timezone.now,verbose_name='تاریخ انتشار مقاله')

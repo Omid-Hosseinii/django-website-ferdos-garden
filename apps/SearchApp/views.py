@@ -10,9 +10,13 @@ class Search(View):
     def get(self, request, *args, **kwargs):
         query=request.GET.get("q")
         memories=Memory.objects.filter(Q(memory_title__icontains=query))
+       
+        memories2=Memory.objects.filter(Q(memory_text__icontains=query))
+        
         workshops=Workshop.objects.filter(Q(title__icontains=query))
         context={
             'memories':memories,
-            'workshops':workshops  
+            'workshops':workshops,
+            'memories2':memories2  
         }
         return render(request,'SearchApp/search.html',context)

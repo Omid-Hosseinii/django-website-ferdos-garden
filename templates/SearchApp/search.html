@@ -46,9 +46,45 @@
           </div>
   
       {% endfor %}
+
+      <hr class="hr_style"> 
+
+      {% for text in memories2 %}
+
+
+          <div class="card text-center mt-4 card-memories bg-opacity-25">
+              <div class="card-body">
+                  <h5 class="card-title fw-bold mt-2 mb-5">{{text.memory_title}}</h5>
+                  <p class="card-text lead">{{text.memory_text}}</p>
+                  <hr class="hr-memory">
+              
+              
+              {% for image in text.pics.all %}
+
+                  <img src="{{media_url}}{{image.memory_image_name}}" alt="{{image.memory_image_name}}" class="img-memories m-3" >
+                  
+              {% endfor %}
+                  
+
+              
+              </div>
+              <div class="card-footer text-muted">
+
+                  {% if text.id in list_memory_liked_id %}
+                      <a id="liked" href="#"><i class="fa fa-heart"></i></a>
+                  {% else %}                           
+                      <a id="unliked" onclick="like({{text.id}})">
+                          <i id="icon_like{{text.id}}" class="fa fa-heart-o"></i>
+                      </a>
+                  {% endif %}
+                      
+              </div>
+          </div>
+  
+      {% endfor %}
             
 
-        <hr class="hr_style"> 
+      <hr class="hr_style"> 
 
         {% for workshop in workshops %}
       

@@ -49,3 +49,10 @@
     border: none;
     cursor: pointer;
 }
+
+
+.boarder-form {
+    border: 0.6mm ridge #f9dd53e4 !important;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: 2px 1px 1px rgb(134, 132, 132) !important;
+  }

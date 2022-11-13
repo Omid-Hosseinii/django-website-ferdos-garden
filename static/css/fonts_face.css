@@ -195,12 +195,12 @@
     font-size:35px
 
 }
-.card-memories > div > p , .contact-form > div > p {
+.card-memories > div > p , .contact-form > div > p , .register-form > div > p {
     font-family: 'IRANYekanRegular';
     font-size:18px
 }
 
-.addmemory > div > h3 , .contact-form > div > h3 , .login-form > div > h3 {
+.addmemory > div > h3 , .contact-form > div > h3 , .login-form > div > h3 , .register-form > div > h3 {
     font-family: 'IRANYekanExtraBold';
     font-size:35px
 }
@@ -216,13 +216,16 @@
 }
 
 .contact-form > .justify-content-center > div > div > div > input[placeholder],
-.login-form > .justify-content-center > div > div > div > input[placeholder] {
+.login-form > .justify-content-center > div > div > div > input[placeholder] , 
+.register-form > .justify-content-center > div > div > div > input[placeholder] {
+ 
     font-family: 'IRANYekanRegular';
     font-size:18px
 }
 
 .contact-form > .justify-content-center > div > div > button,
-.login-form > .justify-content-center > div > div > .d-grid > button {
+.login-form > .justify-content-center > div > div > .d-grid > button ,
+.register-form > .justify-content-center > div > div > .d-grid > button {
     font-family: 'IRANYekanRegular';
     font-size:18px
 }
