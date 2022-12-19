@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'ferdos_garden',
         'USER':'root',
-        'PASSWORD':'OmId57311',
+        'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'3306'
     }
