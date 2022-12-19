@@ -43,6 +43,18 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'VazirBold';
+    src: local("{% static '/fonts/vazir-font/Vazir-Bold.ttf' %}")format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'VazirRegular';
+    src: local("{% static '/fonts/vazir-font/Vazir-Regular.ttf' %}")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ____________________________________________________________________________________________ */
 
@@ -70,6 +82,16 @@
 .cardBtn_main{
     font-family: 'IRANYekanBold';
     font-size:20px;
+}
+
+.cardmain-title{
+    
+    font-family: 'VazirBold';
+    font-size:27px;
+    font-weight: bold;
+    text-shadow: 1px 1px #a9a6a6;
+    letter-spacing: 0.1rem;
+    
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -174,9 +196,9 @@
     font-size:16px
 }
 
-.terms_condition_style > div > h2 {
+.terms_condition_style > div > h3 {
     font-family: 'IRANYekanExtraBold';
-    font-size:40px
+    font-size:35px
     
 } 
 .terms_condition_style > div > p {
@@ -235,7 +257,7 @@
 
 .cardBlog > .card-body > h3 , .cardBlog > h3 , .cardBlog > div > h4  {
     font-family: 'IRANYekanExtraBold';
-    font-size:35px 
+    font-size:30px 
 }
 
 .cardBlog > .card-body > p , .cardBlog > .card-body > .btn-primary {

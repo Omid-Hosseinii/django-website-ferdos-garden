@@ -1,7 +1,9 @@
 .cardBlog{
     
-    box-shadow: 5px 2px 2px rgb(134, 132, 132);
-    border: thick double #32a1ce;
+    border: 0.1mm outset #000000d6;
+    border-radius: 12px;
+    box-shadow: 4px 5px 5px rgb(127, 126, 126);
+    background-color: #c6c9c945 !important;
     
     
 }
@@ -17,8 +19,8 @@
 .img-cardBlog{
     width:350px;
     height:320px;
-    border: 1mm ridge #32a1ce;
-    border-radius: 4px 4px 4px 4px;
+    border: 0.01mm ridge #000000;
+    border-radius: 6px;
     box-shadow: 3px 1px 1px rgb(134, 132, 132);
     
    
@@ -49,4 +51,62 @@
   .article-detail-pdf:hover  {
     box-shadow: inset 195px 0 0 0 #01afae;
     color: white;
+  }
+
+
+.card-body .mb-1 > span{
+    color:#000000c1
+}
+.card-body .mb-1 > span > i{
+    color:#01afae
+}
+
+
+
+.button2 > span > a:link { text-decoration: none; }
+
+.button2 > span > a {
+    color:rgb(255, 255, 255);
+}
+
+.button2 {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #01afae;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 4px 3px 3px rgb(127, 126, 126);
+    font-size: 18px;
+   
+    padding: 10px;
+    width: 150px;
+    transition: all 0.8s;
+    cursor: pointer;
+    
+  }
+  
+  .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button2:hover span {
+    padding-right: 25px;
+  }
+  
+  .button2:hover span:after {
+    opacity: 1;
+    right: 0;
   }

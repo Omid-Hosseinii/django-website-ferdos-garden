@@ -24,8 +24,8 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex justify-content-start bg-opacity-25 bg-secondary cardBlog">
-                            <div class="card-body">
-                              <h3 class="card-title">{{article.title}}</h3>
+                            <div class="card-body p-4">
+                              <h3 class="card-title fw-bold">{{article.title}}</h3>
                               <br/>
                               <div class="mb-1">
                                 <span class="badge rounded-pill text-bg-info">
@@ -65,7 +65,13 @@
                             </span>
                           </div>
                               <p id="article-shorttxt" class="card-text lead text-end">{{article.short_text}}</p>
-                              <a href="{% url 'ArticleDetail' article.slug %}" class="btn btn-primary">ادامه ی مطلب</a>
+
+                              <button class="button2">
+                                <span>
+                                  <a href="{% url 'ArticleDetail' article.slug %}" role="button">کیلیک کنید</a>
+                                </span>
+                              </button>  
+                             
                             </div>
                         </div>
                     </div>

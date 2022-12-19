@@ -22,25 +22,27 @@
                   <div class="col">
                       <div class="card d-flex justify-content-start bg-opacity-25 bg-secondary cardBlog">
                           <div class="card-body">
-                            <h3 class="card-title">{{workshop.title}}</h3>
+                            <h3 class="card-title fw-bold">{{workshop.title}}</h3>
                             <br/>
                             <div class="mb-1">
                               <span class="badge rounded-pill text-bg-info">
-                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                  <i class="fa fa-calendar fa-1x" aria-hidden="true"></i>
                                   تاریخ انتشار:
                                   <span>{{workshop.date_time}}</span>
                               </span>
                             </div>
                             <div class="mb-1">
                               <span class="badge rounded-pill text-bg-info">
-                                <i class="fa-regular fa-g"></i>
+                                <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                                
+                               
                                   مکان برگزاری:
                                   <span>{{workshop.places}}</span>                                 
                               </span>
                             </div>
                             <div class="mb-1">
                               <span class="badge rounded-pill text-bg-info">
-                                <i class="fa-regular fa-g"></i>
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                                   مدرس دوره:
                                   <span>{{workshop.teacher}}</span>                                
                               </span>
@@ -50,8 +52,14 @@
                             <h4>شرایط ثبت نام</h4>
                             <p class="card-text lead text-end">{{workshop.registration}}</p>
                             
-                            {% if workshop.status_id == 3 %}                            
-                              <a href="{% url 'workshop_report' workshop.id %}" class="btn btn-primary">مشاهده گزارش کارگاه</a>
+                            {% if workshop.status_id == 3 %}
+                            
+                            <button class="button2">
+                              <span>
+                                <a href="{% url 'workshop_report' workshop.id %}" role="button">گزارش کارگاه</a>
+                              </span>
+                            </button> 
+                              
                             {% endif %}
                               
                           </div>

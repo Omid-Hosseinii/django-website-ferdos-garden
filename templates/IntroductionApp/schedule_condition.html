@@ -10,11 +10,11 @@
 
 {% block mainTemplate %}
 
-        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">برنامه ی بازدید</h3>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font fw-bold">برنامه ی بازدید</h3>
 
         
 
-        <section class="intro h-50 mt-5 mb-4">
+        <section class="intro h-50 mt-2 mb-4">
             <div class="bg-image ">
             <div class="mask d-flex align-items-center ">
                 <div class="container">
@@ -52,11 +52,11 @@
             </div>
         </section>
 
-        <hr/>
+        
+        <hr>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font fw-bold">نرخ بیلیط ها</h3>
 
-        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">نرخ بیلیط ها</h3>
-
-        <section class="intro h-50 mt-5 mb-4">
+        <section class="intro h-50 mt-2 mb-4">
             <div class="bg-image">
             <div class="mask d-flex align-items-center">
                 <div class="container">
@@ -96,14 +96,14 @@
 
         <hr>
         
-        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font">قوانین و مقرارات</h3>
+        <h3 class="d-flex justify-content-center mt-4 mb-4 schedule-title-font fw-bold">قوانین و مقرارات</h3>
                 
         {% for place in places %}
             <div class="container terms_condition_style mt-2 mb-3">
                 <div class="mt-2" >
-                    <h2>
+                    <h3>
                           {{place.place_name}} :  
-                    </h2>
+                    </h3>
                     <p class="lead mt-2 mb-2 me-4">
                         {{place.Terms_Conditions}}
                     </p>

@@ -30,16 +30,17 @@ thead th {
 thead {
   top: 0;
   position: sticky;
-  background-color: #ebb25dd6;
+  background-color: #01afae;
 }
 
 
+/* terms condtion stye */
 .terms_condition_style{
   
-  border: 1mm solid #ebb25dd6;
-  border-radius: 12px;
+  border: 0.1mm solid #000000d6;
+  border-radius: 3px;
   box-shadow: 4px 5px 5px rgb(127, 126, 126);
-  background-color:#a0c5c9c6;
+  background-color: #c6c9c945 !important;
 }
 
 .img-placepart{

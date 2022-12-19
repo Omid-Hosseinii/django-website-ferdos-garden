@@ -1,0 +1,32 @@
+.navbar{
+    background-color: #ecececcb;
+}
+
+body{
+    background-color: #fafafa
+}
+
+footer{
+    background-color: #ecececcb;
+}
+
+.footer-footer{
+    background-color: rgba(215, 212, 212, 0.418);
+}
+
+footer h2>span{
+    color:#000;
+    cursor:default;
+}
+
+.fa-heart {
+    cursor: pointer !important;
+  }
+  
+  .fa-heart-o {
+    cursor: default !important;
+  }
+
+.welcome:hover{
+    cursor: default !important;
+}  
